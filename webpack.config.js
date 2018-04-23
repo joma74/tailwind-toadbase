@@ -48,8 +48,7 @@ var webpackConfig = [
                 source: "src",
                 img: "src",
                 image: "xlink:href",
-                object: "data",
-                use: "xlink:href"
+                object: "data"
               }
             }
           }
@@ -68,14 +67,14 @@ var webpackConfig = [
           ]
         },
         {
-          test: /\.(png|jpe?g|gif|svg)(\?.*|\#.*)?$/,
+          test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
           use: [
             {
               loader: "file-loader",
               options: {
                 limit: 10000,
                 emitFile: true,
-                name: "[name].[hash:7].[ext]",
+                name: "[name].[ext]",
                 useRelativePath: true
               }
             }
@@ -87,7 +86,7 @@ var webpackConfig = [
           options: {
             limit: 10000,
             emitFile: true,
-            name: "[name].[hash:7].[ext]",
+            name: "[name].[ext]",
             useRelativePath: true
           }
         }
