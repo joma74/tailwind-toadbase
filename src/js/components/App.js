@@ -1,3 +1,4 @@
+
 // @ts-ignore
 import renderFnkt from "@home/app.html?style=@home/app.css";
 

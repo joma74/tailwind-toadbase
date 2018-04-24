@@ -48,7 +48,8 @@ var webpackConfig = [
                 source: "src",
                 img: "src",
                 image: "xlink:href",
-                object: "data"
+                object: "data",
+                use: ["href", "xlink:href"]
               }
             }
           }
@@ -67,7 +68,21 @@ var webpackConfig = [
           ]
         },
         {
-          test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+          test: /\.(png|jpe?g|gif)(\?.*)?$/,
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                limit: 10000,
+                emitFile: true,
+                name: "[name].[ext]",
+                useRelativePath: true
+              }
+            }
+          ]
+        },
+        {
+          test: /\.svg/g,
           use: [
             {
               loader: "file-loader",
