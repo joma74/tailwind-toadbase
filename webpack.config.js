@@ -68,21 +68,7 @@ var webpackConfig = [
           ]
         },
         {
-          test: /\.(png|jpe?g|gif)(\?.*)?$/,
-          use: [
-            {
-              loader: "file-loader",
-              options: {
-                limit: 10000,
-                emitFile: true,
-                name: "[name].[ext]",
-                useRelativePath: true
-              }
-            }
-          ]
-        },
-        {
-          test: /\.svg/g,
+          test: /\.(png|jpe?g|gif|svg)(#.*)?(\?.*)?$/,
           use: [
             {
               loader: "file-loader",
