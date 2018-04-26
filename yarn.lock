@@ -4491,8 +4491,8 @@ type-is@~1.6.15, type-is@~1.6.16:
     mime-types "~2.1.18"
 
 typescript@^2.9.0-dev.20180414:
-  version "2.9.0-dev.20180421"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.0-dev.20180421.tgz#b937b164ce73f833f2ed5c36571e238898b264ce"
+  version "2.9.0-dev.20180426"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.0-dev.20180426.tgz#d6b8d31c6b874ccd66d4165fd0e692d2a9e0e972"
 
 uglify-js@3.3.x:
   version "3.3.21"
