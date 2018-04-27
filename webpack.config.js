@@ -6,7 +6,7 @@ var DiskPlugin = require("webpack-disk-plugin");
 const prettyjson = require("prettyjson");
 
 /**
- * @type {import ("webpack"}.Configuration}
+ * @type {import ("webpack").Configuration[]}
  */
 var webpackConfig = [
   {
