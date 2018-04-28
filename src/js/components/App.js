@@ -1,10 +1,24 @@
 // @ts-ignore
 import renderFnkt from "@home/app.html?style=@home/app.css";
+import Tool from "@components/Tool";
 
 
 /** @type {import("vue").ComponentOptions} */
 let vueComponentOptions = {
   name: "SPARoot",
+  components: {
+    "tool": Tool
+  },
+  data: function() {
+    return {
+      isMenuOpen: false
+    }
+  },
+  methods: {
+    toggleMenu: function(){
+      this.isMenuOpen = !this.isMenuOpen;
+    }
+  },
   mounted() {
     /** @type {import("vue").default} */
     // @ts-ignore

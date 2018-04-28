@@ -1,0 +1,10 @@
+<div class="flex -mb-px mr-6">
+    <a  href="#" 
+        v-bind:class="[{'opacity-100 text-white sm:text-blue-dark': isActive, 'border-white sm:border-blue-dark': isActive, 'hover:opacity-100 sm:hover:border-grey-dark': !isActive}]" 
+        class="no-underline flex items-center py-4 border-b opacity-50 sm:opacity-100 text-white sm:text-grey-dark border-transparent">
+        <svg class="w-4 h-4 opacity-50 fill-current mr-2">
+            <use :href="svgIcon"></use>
+        </svg>
+        {{ title }}
+    </a>
+</div>

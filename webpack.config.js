@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 var DiskPlugin = require("webpack-disk-plugin");
 const prettyjson = require("prettyjson");
+const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 
 /**
  * @type {import ("webpack").Configuration[]}
@@ -19,7 +20,8 @@ var webpackConfig = [
       port: 8080,
       watchContentBase: false,
       hot: true,
-      stats: "errors-only"
+      stats: "errors-only",
+      host: "0.0.0.0"
     },
     resolve: {
       alias: {
@@ -30,7 +32,7 @@ var webpackConfig = [
         "@img": path.resolve(__dirname, "src/assets/img/"),
         "@svg": path.resolve(__dirname, "src/assets/svg/"),
         "@components": path.resolve(__dirname, "src/js/components/"),
-        "@html": path.resolve(__dirname, "src/assets/html/")
+        "@html": path.resolve(__dirname, "src/html/")
       }
     },
     // devtool: "source-map",
@@ -49,7 +51,8 @@ var webpackConfig = [
                 img: "src",
                 image: "xlink:href",
                 object: "data",
-                use: ["href", "xlink:href"]
+                use: ["href", "xlink:href"],
+                tool: ["svgIcon"]
               }
             }
           }
@@ -158,7 +161,8 @@ var webpackConfig = [
             }
           }
         ]
-      })
+      }),
+      new WebpackBuildNotifierPlugin(),
     ]
   },
 ];

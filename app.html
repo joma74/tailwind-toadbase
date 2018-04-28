@@ -1,9 +1,10 @@
 <body class="font-sans bg-grey-lighter">
+    <!-- Top nav -->
     <div>
         <div class="bg-blue-dark">
             <div class="container mx-auto px-4">
                 <div id="toolbar" class="flex items-center sm:justify-between py-4">
-                    <div class="w-1/4 sm:hidden">
+                    <div class="w-1/4 sm:hidden hover:cursor-pointer" @click.stop="toggleMenu">
                         <svg class="w-8 h-8 fill-current text-white">
                             <use href="~@svg/menu.svg#menu"></use>
                         </svg>
@@ -21,6 +22,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- Secondary nav-->
+    <div v-bind:class="{ 'hidden': isMenuOpen }" class="sm:block bg-blue-dark sm:bg-grey-lightest border-b">
+        <div class="container mx-auto px-4">
+            <div class="sm:flex">
+                <tool svgIcon="~@svg/toolbar.svg#dashboard" title="Dashboard" :isActive="true"></tool>
+                <tool svgIcon="~@svg/toolbar.svg#swap" title="Buy/Sell" :isActive="false"></tool>
+                <tool svgIcon="~@svg/toolbar.svg#wallet" title="Accounts" :isActive="false"></tool>
+                <tool svgIcon="~@svg/toolbar.svg#briefcase" title="Tools" :isActive="false"></tool>
+                <tool svgIcon="~@svg/toolbar.svg#cog" title="Settings" :isActive="false"></tool>
             </div>
         </div>
     </div>
