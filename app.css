@@ -4,3 +4,8 @@
 
 @tailwind utilities;
 
+@responsive {
+  .leading-byfont {
+    line-height: normal;
+  }
+}

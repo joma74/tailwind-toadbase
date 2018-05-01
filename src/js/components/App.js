@@ -1,13 +1,17 @@
 // @ts-ignore
 import renderFnkt from "@home/app.html?style=@home/app.css";
 import Tool from "@components/Tool";
+import XRateSumCur from "@components/XRateSumCur";
+import TimelineRange from "@components/TimelineRange";
 
 
 /** @type {import("vue").ComponentOptions} */
 let vueComponentOptions = {
   name: "SPARoot",
   components: {
-    "tool": Tool
+    "tool": Tool,
+    "xratesumcur": XRateSumCur,
+    "timelinerange": TimelineRange
   },
   data: function() {
     return {

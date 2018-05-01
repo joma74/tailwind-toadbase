@@ -4508,8 +4508,8 @@ type-is@~1.6.15, type-is@~1.6.16:
     mime-types "~2.1.18"
 
 typescript@^2.9.0-dev.20180414:
-  version "2.9.0-dev.20180426"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.0-dev.20180426.tgz#d6b8d31c6b874ccd66d4165fd0e692d2a9e0e972"
+  version "2.9.0-dev.20180501"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.0-dev.20180501.tgz#f476b65e5f7cc504e4f3928d05beba1298a70214"
 
 uglify-js@3.3.x:
   version "3.3.21"
@@ -4738,7 +4738,7 @@ vue-template-es2015-compiler@^1.6.0:
 
 "vue-template-loader@https://github.com/joma74/vue-template-loader.git":
   version "0.4.1"
-  resolved "https://github.com/joma74/vue-template-loader.git#2b7433034d78745f7af1753b2be3bd6ea1e4e648"
+  resolved "https://github.com/joma74/vue-template-loader.git#300bbb187f9bb30e246e3ee59c19dac162a69bbc"
   dependencies:
     hash-sum "^1.0.2"
     loader-utils "^1.1.0"
