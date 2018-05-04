@@ -3,15 +3,16 @@ import renderFnkt from "@home/app.html?style=@home/app.css";
 import Tool from "@components/Tool";
 import XRateSumCur from "@components/XRateSumCur";
 import TimelineRange from "@components/TimelineRange";
+import SpanLBF from "@components/Span-LBF";
+import Vue from "vue";
 
-
-/** @type {import("vue").ComponentOptions} */
-let vueComponentOptions = {
+let vueComponentOptions = Vue.extend({
   name: "SPARoot",
   components: {
     "tool": Tool,
     "xratesumcur": XRateSumCur,
-    "timelinerange": TimelineRange
+    "timelinerange": TimelineRange,
+    "span-lbf": SpanLBF
   },
   data: function() {
     return {
@@ -32,6 +33,6 @@ let vueComponentOptions = {
     else
       console.error(`this.el having a value of >>${compInst.$el}<< should be an HTMLBodyElement but is not`);
   }
-};
+});
 
 export default renderFnkt(vueComponentOptions);
