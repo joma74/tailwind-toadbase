@@ -2,8 +2,7 @@
 import renderFnkt from "@html/tool.html";
 import Vue from "vue";
 
-/** @type {import("vue").ComponentOptions & ThisType<Vue>} */
-let vueComponentOptions = {
+let vueComponentOptions = Vue.extend({
     name: "Tool",
     props: {
       svgIcon: {
@@ -16,6 +15,6 @@ let vueComponentOptions = {
         type: Boolean
       },
     }
-  };
+  });
   
   export default renderFnkt(vueComponentOptions);

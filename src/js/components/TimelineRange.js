@@ -1,8 +1,8 @@
 // @ts-ignore
 import renderFnkt from "@html/timelinerange.html";
+import Vue from "vue";
 
-/** @type {import("vue").ComponentOptions} */
-let vueComponentOptions = {
+let vueComponentOptions = Vue.extend({
   name: "TimelineRange",
   props: {
     name: {
@@ -13,6 +13,6 @@ let vueComponentOptions = {
       default: false
     }
   }
-};
+});
 
 export default renderFnkt(vueComponentOptions);

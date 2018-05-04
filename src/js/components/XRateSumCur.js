@@ -7,8 +7,7 @@ const formatter = new Intl.NumberFormat(window.navigator.language, {
   style: "decimal"
 });
 
-/** @type {import("vue").ComponentOptions & ThisType<Vue>} */
-let vueComponentOptions = {
+let vueComponentOptions = Vue.extend({
   name: "XRateCur",
   props: {
     name: {
@@ -30,6 +29,6 @@ let vueComponentOptions = {
         return formatter.format(this.rate);
     }
   }
-};
+});
 
 export default renderFnkt(vueComponentOptions);
