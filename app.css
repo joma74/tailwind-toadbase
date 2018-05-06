@@ -9,3 +9,11 @@
     line-height: normal;
   }
 }
+
+.mr-2-ex-last > *:not(:last-child) {
+  @apply mr-2;
+}
+
+.border-r-ex-last > *:not(:last-child) > * {
+  @apply border-r;
+}
