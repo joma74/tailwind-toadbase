@@ -42,7 +42,7 @@
         <div class="border-t border-b sm:border-l-1 sm:border-r-1 sm:rounded shadow bg-white">
             <div id="x-rates-summary" class="border-b px-4 sm:px-6">
                 <div class="flex justify-between">
-                    <div class="text-blue-dark self-center sm:hidden">
+                    <div class="flex-no-shrink text-blue-dark self-center pr-4 sm:hidden">
                         Price Charts
                     </div>
                     <div id="x-rates-summary-currencies" class="hidden sm:flex mr-2-ex-last">
@@ -61,21 +61,26 @@
                 </div>
             </div>
             <div>
-                <div class="flex items-center px-4 sm:hidden">
-                    <div class="flex-grow flex-no-shrink">
+                <div class="flex content-start px-4 py-6 mb-2 sm:hidden">
+                    <div class="flex-grow flex-no-shrink pr-4">
                         <div class="text-3xl text-grey-darker leading-normal">
                             <span-lbf class="text-xl align-text-top">CA$</span-lbf><span-lbf class="text-3xl">21.380</span-lbf><span-lbf
                                 class="text-xl align-text-top">,01</span-lbf>
                         </div>
+                        <div class="flex items-center text-green-light text-sm">
+                            <svg class="w-4 h-4 fill-current inline flex-no-shrink">
+                                <use href="~@svg/toolbar.svg#arrow-up"></use>
+                            </svg>CA$12.982,27 (154,99%)
+                        </div>
                     </div>
-                    <div class="flex-shrink w-32 inline-block relative" style="min-width: 8ch;">
+                    <div class="flex-shrink w-32 relative" style="min-width: 8ch;">
                         <select class="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-2 py-2 pr-8 rounded">
                             <option>BTC</option>
                             <option>ETH</option>
                             <option>LTC</option>
                         </select>
-                        <div class="pointer-events-none absolute pin-y pin-r flex items-center px-1 text-grey-darker">
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <div class="pointer-events-none absolute pin-y pin-r px-1 text-grey-darker">
+                            <svg class="block fill-current h-4 w-4 inline-block" style="position: relative; top: 25%; transform: translateY(-25%);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                             </svg>
                         </div>
