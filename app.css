@@ -17,3 +17,11 @@
 .border-r-ex-last > *:not(:last-child) > * {
   @apply border-r;
 }
+
+.douchebag-items-center {
+  top: 50%; transform: translateY(-50%);
+}
+
+.douchebag-justify-center {
+  right: 50%; transform: translateX(-50%);
+}
