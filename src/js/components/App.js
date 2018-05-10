@@ -2,7 +2,7 @@
 import renderFnkt from "@home/app.html?style=@home/app.css";
 import Tool from "@components/Tool";
 import XRateSumCur from "@components/XRateSumCur";
-import TimelineRange from "@components/TimelineRange";
+import OptionLine from "@components/OptionLine";
 import SpanLBF from "@components/Span-LBF";
 import Vue from "vue";
 
@@ -11,7 +11,7 @@ let vueComponentOptions = Vue.extend({
   components: {
     "tool": Tool,
     "xratesumcur": XRateSumCur,
-    "timelinerange": TimelineRange,
+    "optionline": OptionLine,
     "span-lbf": SpanLBF
   },
   data: function() {
@@ -28,6 +28,7 @@ let vueComponentOptions = Vue.extend({
     /** @type {import("vue").default} */
     // @ts-ignore
     const compInst = this;
+
     if(compInst.$el instanceof HTMLBodyElement)
       document.documentElement.replaceChild(compInst.$el, document.body);
     else

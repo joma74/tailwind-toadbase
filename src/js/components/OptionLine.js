@@ -1,9 +1,9 @@
 // @ts-ignore
-import renderFnkt from "@html/timelinerange.html";
+import renderFnkt from "@html/option-line.html";
 import Vue from "vue";
 
 let vueComponentOptions = Vue.extend({
-  name: "TimelineRange",
+  name: "OptionLine",
   props: {
     name: {
       type: String
