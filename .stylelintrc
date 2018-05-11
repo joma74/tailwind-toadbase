@@ -1,5 +1,6 @@
 {
   "extends": "stylelint-config-recommended",
+  "ignoreFiles": ["./build/**/*", "./build/**/*", "./node_modules/**/*"],
   "rules": {
     "at-rule-no-unknown": [ true, {
       "ignoreAtRules": [
