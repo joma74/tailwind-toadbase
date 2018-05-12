@@ -192,16 +192,24 @@
             </div>
             <div id="activity" class="w-full sm:w-1/2 sm:px-4">
                 <div class="bg-white rounded border">
-                    <div class="px-4 sm:px-6 flex justify-between items-center border-b">
+                    <div id="activity-header" class="px-4 sm:px-6 flex justify-between items-center border-b">
                         <h3 class="text-blue-dark font-normal">Recent Activity</h3>
                         <div class="flex -mb-x">
                             <div id="portfolio-options" class="flex mr-2-ex-last">
                                 <optionline name="&nbsp;"></optionline>
                             </div>
-                            <div class="py-4">&nbsp;</div>
                         </div>
                     </div>
-                    <div class="px-4 sm:px-6 py-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, dicta.</div>
+                    <div id="activity-content" class="px-4 sm:px-6 py-4">
+                        <div class="flex flex-col items-center py-8">
+                            <svg class="w-16 h-16 fill-current text-grey mb-4">
+                                <use href="~@svg/activities.svg#rocket"></use>
+                            </svg>
+                            <p class="font-medium text-2xl text-grey-darker mb-4">No buys or sells yet</p>
+                            <p class="text-grey max-w-xs mx-auto text-center mb-6">You've successfully linked a payment method to your account and can start buying crypto currencies.</p>
+                            <button type="button" class="bg-blue text-white px-6 py-4 rounded border border-blue-dark">Buy now</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
