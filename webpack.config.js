@@ -7,6 +7,17 @@ const prettyjson = require("prettyjson");
 const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 
 /**
+ * @type {import("webpack-dev-server").Configuration}
+ */
+const devServer = {
+  port: 8080,
+  watchContentBase: false,
+  hot: true,
+  stats: "errors-only",
+  host: "0.0.0.0",
+}
+
+/**
  * @type {import ("webpack").Configuration[]}
  */
 var webpackConfig = [
@@ -16,13 +27,7 @@ var webpackConfig = [
       path: path.resolve(__dirname, "dist"),
       filename: "bundle.js"
     },
-    devServer: {
-      port: 8080,
-      watchContentBase: false,
-      hot: true,
-      stats: "errors-only",
-      host: "0.0.0.0"
-    },
+    devServer,
     resolve: {
       alias: {
         vue$: "vue/dist/vue.esm.js",
