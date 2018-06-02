@@ -1,18 +1,18 @@
 // @ts-ignore
-import renderFnkt from "@html/option-line.html";
-import Vue from "vue";
+import renderFnkt from "@html/option-line.html"
+import Vue from "vue"
 
 let vueComponentOptions = Vue.extend({
   name: "OptionLine",
   props: {
     name: {
-      type: String
+      type: String,
     },
     isActive: {
       type: Boolean,
-      default: false
-    }
-  }
-});
+      default: false,
+    },
+  },
+})
 
-export default renderFnkt(vueComponentOptions);
+export default renderFnkt(vueComponentOptions)
